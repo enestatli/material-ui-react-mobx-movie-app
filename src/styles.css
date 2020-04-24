@@ -22,48 +22,13 @@ body {
   justify-content: space-between;
   background-color: whitesmoke;
   /*height: 600px;*/
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .buttons:hover {
   opacity: 1;
   transition: opacity 0.25s ease-in-out 0s;
 }
-
-/*.buttons button {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  text-decoration: none;
-  color: black;
-  font-size: 12px;
-  font-weight: 400;
-  border-top: 1px solid #d1d0ce;
-  
-}*/
-
-/*.buttons:hover button {
-  visibility: visible;
-  opacity: 1;
-}*/
-
-/*.buttons:hover button {
-  visibility: visible;
-  opacity: 1;
-}*/
-
-/*.extras {
-  display: flex;
-  font-size: 36px;
-}
-
-.extras > * {
-  margin-left: 10px;
-}
-
-.extras > :first-child {
-  margin: 0;
-} */
 
 footer {
   height: 100px;

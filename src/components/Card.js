@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import Share from "@material-ui/icons/ShareOutlined";
-import PlayArrow from "@material-ui/icons/PlayArrowOutlined";
 import Info from "@material-ui/icons/InfoOutlined";
 import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
@@ -13,11 +12,11 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import withMobileDialog from "@material-ui/core/withMobileDialog";
 import DialogActions from "@material-ui/core/DialogActions";
-import Divider from "@material-ui/core/Divider";
-import { MovieDetailViewModel } from "../models/movie.models";
-import _ from "lodash";
 import Rating from "@material-ui/lab/Rating";
 import Box from "@material-ui/core/Box";
+
+import { MovieDetailViewModel } from "../models/movie.models";
+import _ from "lodash";
 
 const component = (props) => {
   const [opened, setOpen] = useState(false);
@@ -95,34 +94,9 @@ const component = (props) => {
 
   return (
     <div style={{ ...styles.root, position: "relative" }}>
-      <Button
-        onClick={() => {
-          onClickLike(movie, (result) => {
-            if (result !== liked) {
-              setLiked(result);
-            }
-          });
-        }}
-        style={{ position: "absolute", zIndex: 1, top: 10, right: 0 }}
-        color="inherit"
-        size="large"
-      >
-        {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
-      </Button>
       <Paper style={styles.card}>
         <div style={styles.body}></div>
         <div className="buttons">
-          <Button
-            color="inherit"
-            size="small"
-            href={`https://720p-izle.com/izle/altyazi/${movie.title
-              .split(" ")
-              .join("-")
-              .toLowerCase()}.html`}
-            target="_blank"
-          >
-            <PlayArrow />
-          </Button>
           <Button color="inherit" size="large" onClick={showInfo}>
             <Info />
           </Button>
@@ -131,22 +105,20 @@ const component = (props) => {
               <DialogTitle>{info.title} </DialogTitle>
 
               <DialogContent>
-                <DialogContentText>
-                  <Typography>{info.plot}</Typography>
-                  <Box component="div" mb={3} borderColor="transparent">
-                    <Typography component="legend">
-                      IMDB Rating {info.rating}
-                    </Typography>
-                    <Rating
-                      max={10}
-                      precision={0.1}
-                      name="read-only"
-                      value={info.rating}
-                      readOnly
-                    />
-                    <Typography>{info.year}</Typography>
-                  </Box>
-                </DialogContentText>
+                <DialogContentText>{info.plot}</DialogContentText>
+                <Box component="div" mb={3} borderColor="transparent">
+                  <Typography component="legend">
+                    IMDB Rating {info.rating}
+                  </Typography>
+                  <Rating
+                    max={10}
+                    precision={0.1}
+                    name="read-only"
+                    value={info.rating}
+                    readOnly
+                  />
+                  <Typography>{info.year}</Typography>
+                </Box>
               </DialogContent>
               <DialogActions>
                 <Button
@@ -160,8 +132,18 @@ const component = (props) => {
             </ResponsiveDialog>
           )}
 
-          <Button color="inherit" size="large">
-            <Share />
+          <Button
+            onClick={() => {
+              onClickLike(movie, (result) => {
+                if (result !== liked) {
+                  setLiked(result);
+                }
+              });
+            }}
+            color="inherit"
+            size="large"
+          >
+            {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
           </Button>
         </div>
       </Paper>

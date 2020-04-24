@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+
 import Grid from "@material-ui/core/Grid";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -7,8 +9,6 @@ import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 import { withStyles } from "@material-ui/core/styles";
-
-import { Link } from "react-router-dom";
 
 import CardComponent from "../components/Card";
 import { MovieFilter } from "../models/movie.models";
@@ -28,7 +28,7 @@ const styles = (theme) => ({
     marginRight: 20,
   },
   title: {
-    display: "none",
+    display: "block",
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
@@ -40,14 +40,14 @@ const styles = (theme) => ({
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    marginLeft: 0,
+    marginLeft: 10,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       width: "auto",
     },
   },
   searchIcon: {
-    width: theme.spacing(9),
+    width: theme.spacing(5),
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
@@ -60,11 +60,11 @@ const styles = (theme) => ({
     width: "100%",
   },
   inputInput: {
-    paddingLeft: theme.spacing(10),
+    paddingLeft: theme.spacing(4),
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: 120,
+      width: 200,
       "&:focus": {
         width: 200,
       },
