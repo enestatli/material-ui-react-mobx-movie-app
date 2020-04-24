@@ -142,7 +142,7 @@ const page = observer((props) => {
           </Toolbar>
         </AppBar>
       </div>
-      <Grid container spacing={3} style={{ padding: 3, marginTop: 10 }}>
+      <Grid container spacing={4} style={{ padding: 3, marginTop: 10 }}>
         {filter != null
           ? movies.forEach((movie) => {
               const ids = likedMovies.map((lm) => lm.id);

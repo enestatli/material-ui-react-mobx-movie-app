@@ -141,7 +141,7 @@ const page = observer((props) => {
           </Toolbar>
         </AppBar>
       </div>
-      <Grid container spacing={10} style={{ padding: 3, marginTop: 10 }}>
+      <Grid container spacing={4} style={{ padding: 3, marginTop: 10 }}>
         {movies.map((movie, i) => (
           <Grid item xs={12} sm={6} lg={4} xl={3} key={movie.id + i.toString()}>
             <CardComponent

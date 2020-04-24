@@ -66,7 +66,7 @@ export class MovieFilter {
   s;
   y;
   type;
-  constructor(s = "action", y = "", type = "movie") {
+  constructor(s = "black", y = "", type = "movie") {
     this.s = s;
     this.y = y;
     this.type = type;

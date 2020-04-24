@@ -105,6 +105,9 @@ const component = (props) => {
               <DialogTitle>{info.title} </DialogTitle>
 
               <DialogContent>
+                <DialogContentText style={{ fontWeight: "900" }}>
+                  {info.genre}
+                </DialogContentText>
                 <DialogContentText>{info.plot}</DialogContentText>
                 <Box component="div" mb={3} borderColor="transparent">
                   <Typography component="legend">
