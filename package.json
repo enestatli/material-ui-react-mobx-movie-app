@@ -8,7 +8,6 @@
     "@material-ui/core": "^4.9.11",
     "@material-ui/icons": "3.0.2",
     "@material-ui/lab": "^4.0.0-alpha.50",
-    "axios": "0.18.0",
     "firebase": "5.9.1",
     "lodash": "^4.17.15",
     "mobx": "^5.15.4",
