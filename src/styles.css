@@ -1,0 +1,79 @@
+body {
+  background: whitesmoke;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #a170c9, #6441a5);
+  -webkit-box-shadow: 10px 10px 31px 0px rgba(100, 65, 165, 0.14);
+  -moz-box-shadow: 10px 10px 31px 0px rgba(100, 65, 165, 0.14);
+  box-shadow: 10px 10px 31px 0px rgba(100, 65, 165, 0.14);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  /*height: 600px;*/
+  opacity: 0;
+}
+
+.buttons:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out 0s;
+}
+
+/*.buttons button {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  border-top: 1px solid #d1d0ce;
+  
+}*/
+
+/*.buttons:hover button {
+  visibility: visible;
+  opacity: 1;
+}*/
+
+/*.buttons:hover button {
+  visibility: visible;
+  opacity: 1;
+}*/
+
+/*.extras {
+  display: flex;
+  font-size: 36px;
+}
+
+.extras > * {
+  margin-left: 10px;
+}
+
+.extras > :first-child {
+  margin: 0;
+} */
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: VT323, monospace;
+  justify-content: center;
+  margin-top: auto;
+  /*Modify here*/
+  color: var(--black);
+}

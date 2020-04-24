@@ -1,0 +1,35 @@
+{
+  "name": "material-ui-and-react-movie-search",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "3.0.2",
+    "@material-ui/lab": "^4.0.0-alpha.50",
+    "axios": "0.18.0",
+    "firebase": "5.9.1",
+    "lodash": "^4.17.15",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "qs": "^6.9.3",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
